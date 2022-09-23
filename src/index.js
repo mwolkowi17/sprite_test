@@ -4,6 +4,8 @@ import { OrbitControls } from '../node_modules/three/examples/jsm/controls/Orbit
 import { light2, light3, light4 } from './direct_light.js';
 import {cube} from './box.js'
 
+require("./loader.js");
+
 export const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -20,7 +22,7 @@ scene.add(light3);
 scene.add(light3.target);
 scene.add(light4);
 scene.add(light4.target);
-scene.add(cube);
+//scene.add(cube);
 
 camera.position.z = 5;
 const controls = new OrbitControls(camera, renderer.domElement);
