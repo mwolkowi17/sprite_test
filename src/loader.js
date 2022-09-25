@@ -21,6 +21,16 @@ const gltfLoader2 = new GLTFLoader()
       });
       console.log(sceneobjects);
       
+      for(let a=0;a<=17;a++){
+       if (sceneobjects[a].parent.name==="kula1"){
+         console.log(a)
+       }
+      
+        };
+        //console.log(sceneobjects[a].name)
+      
+      
+      
      
       
 
