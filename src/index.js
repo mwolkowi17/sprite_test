@@ -3,13 +3,14 @@ import * as THREE from 'three';
 import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls';
 import { light2, light3, light4 } from './direct_light.js';
 import {cube} from './box.js'
+import { TWEEN } from '../node_modules/three/examples/jsm/libs/tween.module.min'
 
 require("./loader.js");
 
 export const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+export const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+export const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
 document.body.appendChild(renderer.domElement);
@@ -36,7 +37,7 @@ const animate = function () {
     cube.rotation.x += 0.02;
     cube.rotation.y += 0.01;
 
-
+    TWEEN.update()
     renderer.render(scene, camera);
 }
 
