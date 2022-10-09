@@ -23,7 +23,8 @@ const gltfLoader2 = new GLTFLoader()
         }
       });
       let positionA={y:1}
-      sceneobjects[6].position.set(0,positionA.y,0)
+      //sceneobjects[6].position.set(0,positionA.y,0)
+      sceneobjects[15].position.set(10,positionA.y,0)
 
       // var tween = new TWEEN.Tween(positionA)
       // .to({y:4}, 500)
@@ -31,8 +32,8 @@ const gltfLoader2 = new GLTFLoader()
       //      .easing(TWEEN.Easing.Cubic.Out)
       //      .onUpdate(() => render())
       //      .start()
-      var tween = new TWEEN.Tween(sceneobjects[6].position)
-                  .to({x: 0, y: 4, z: 0}, 1000)
+      var tween = new TWEEN.Tween(sceneobjects[6].rotation)
+                  .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
                   .start()
       tween.onUpdate(function (object) {
             console.log(object.y)
