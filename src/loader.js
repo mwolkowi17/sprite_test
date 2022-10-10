@@ -1,9 +1,9 @@
 import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader';
-import * as THREE from 'three';
 import { scene } from './index.js';
 import { renderer } from './index.js';
 import { camera } from './index.js';
 import { TWEEN } from '../node_modules/three/examples/jsm/libs/tween.module.min'
+
 
 const gltfLoader2 = new GLTFLoader()
 
@@ -23,21 +23,26 @@ const gltfLoader2 = new GLTFLoader()
         }
       });
       let positionA={y:1}
-      //sceneobjects[6].position.set(0,positionA.y,0)
-      sceneobjects[15].position.set(10,positionA.y,0)
+      sceneobjects[15].position.set(800,positionA.y,0)
 
-      // var tween = new TWEEN.Tween(positionA)
-      // .to({y:4}, 500)
       
-      //      .easing(TWEEN.Easing.Cubic.Out)
-      //      .onUpdate(() => render())
-      //      .start()
-      var tween = new TWEEN.Tween(sceneobjects[6].rotation)
+      // var tween = new TWEEN.Tween(sceneobjects[6].rotation)
+      //             .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
+      //             .start()
+
+      function close(){
+        new TWEEN.Tween(sceneobjects[6].rotation)
                   .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
                   .start()
-      tween.onUpdate(function (object) {
-            console.log(object.y)
-          })
+      }
+     
+      let closebutton = document.getElementById("close_button");
+      closebutton.addEventListener("click", function () {
+       close();
+      }, false)
+      // tween.onUpdate(function (object) {
+      //       console.log(object.y)
+      //     })
       console.log(sceneobjects);
       
       for(let a=0;a<=17;a++){

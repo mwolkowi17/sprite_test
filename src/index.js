@@ -29,7 +29,7 @@ camera.position.z = 5;
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.update();
 
-console.log('begin')
+
 
 const animate = function () {
     requestAnimationFrame(animate);
