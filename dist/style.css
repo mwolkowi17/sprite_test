@@ -3,3 +3,9 @@
     bottom: 25px;
     left: 180px;;
 }
+
+#start_button{
+    position:absolute;
+    bottom: 25px;
+    left: 100px;
+}

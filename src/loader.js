@@ -35,11 +35,22 @@ const gltfLoader2 = new GLTFLoader()
                   .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
                   .start()
       }
+
+      function open(){
+        new TWEEN.Tween(sceneobjects[6].rotation)
+                  .to({x: Math.PI/2, y: 0, z: 0}, 1000)
+                  .start()
+      }
      
       let closebutton = document.getElementById("close_button");
       closebutton.addEventListener("click", function () {
        close();
       }, false)
+
+      let openbutton = document.getElementById("start_button");
+      openbutton.addEventListener("click", function () {
+        open();
+       }, false)
       // tween.onUpdate(function (object) {
       //       console.log(object.y)
       //     })
