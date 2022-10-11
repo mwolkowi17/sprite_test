@@ -32,6 +32,9 @@ const gltfLoader2 = new GLTFLoader()
         new TWEEN.Tween(sceneobjects[6].rotation)
                   .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
                   .start()
+                  new TWEEN.Tween(sceneobjects[7].rotation)
+                  .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
+                  .start()
         ifOpen=true;
       }
 
@@ -39,6 +42,9 @@ const gltfLoader2 = new GLTFLoader()
 
         if(ifOpen===true){
         new TWEEN.Tween(sceneobjects[6].rotation)
+                  .to({x: 0, y: 0, z: 0}, 1000)
+                  .start()
+        new TWEEN.Tween(sceneobjects[7].rotation)
                   .to({x: 0, y: 0, z: 0}, 1000)
                   .start()
         }
