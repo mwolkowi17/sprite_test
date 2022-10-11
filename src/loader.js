@@ -26,20 +26,22 @@ const gltfLoader2 = new GLTFLoader()
       sceneobjects[15].position.set(800,positionA.y,0)
 
       
-      // var tween = new TWEEN.Tween(sceneobjects[6].rotation)
-      //             .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
-      //             .start()
-
+      
+      let ifOpen = false;
       function close(){
         new TWEEN.Tween(sceneobjects[6].rotation)
                   .to({x: -Math.PI/2, y: 0, z: 0}, 1000)
                   .start()
+        ifOpen=true;
       }
 
       function open(){
+
+        if(ifOpen===true){
         new TWEEN.Tween(sceneobjects[6].rotation)
-                  .to({x: Math.PI/2, y: 0, z: 0}, 1000)
+                  .to({x: 0, y: 0, z: 0}, 1000)
                   .start()
+        }
       }
      
       let closebutton = document.getElementById("close_button");
