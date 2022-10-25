@@ -7,6 +7,17 @@ import { TWEEN } from '../node_modules/three/examples/jsm/libs/tween.module.min'
 
 const gltfLoader2 = new GLTFLoader()
 
+const loadingInfo =document.getElementById("loading");
+
+
+var onProgress = function ( xhr ) {
+  // if ( xhr.lengthComputable ) {
+  //   var percentComplete = xhr.loaded / xhr.total * 100;
+  //   console.log( Math.round(percentComplete, 2) + '% downloaded' );
+  // }
+  console.log('loading')
+  
+};
     gltfLoader2.load('./sprite1.gltf', (gltf) => {
       const root = gltf.scene;
       
@@ -24,7 +35,7 @@ const gltfLoader2 = new GLTFLoader()
       });
       let positionA={y:1}
       sceneobjects[15].position.set(800,positionA.y,0)
-
+      loadingInfo.style.visibility='hidden';
       
       
       let ifOpen = false;
@@ -78,7 +89,7 @@ const gltfLoader2 = new GLTFLoader()
       
 
      
-    })
+    }, onProgress)
 
     function render() {
       renderer.render(scene, camera)

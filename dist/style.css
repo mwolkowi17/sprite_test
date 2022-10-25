@@ -9,3 +9,10 @@
     bottom: 25px;
     left: 100px;
 }
+
+#loading{
+    position:absolute;
+    left: 500px;
+    top: 300px;
+    color: white;
+}
