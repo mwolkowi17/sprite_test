@@ -1,4 +1,4 @@
-import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader';
+
 import * as THREE from 'three';
 import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls';
 import { light2, light3, light4 } from './direct_light.js';
