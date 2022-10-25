@@ -1,3 +1,4 @@
+
 import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader';
 import { scene } from './index.js';
 import { renderer } from './index.js';
@@ -5,12 +6,14 @@ import { camera } from './index.js';
 import { TWEEN } from '../node_modules/three/examples/jsm/libs/tween.module.min'
 
 
+
 const gltfLoader2 = new GLTFLoader()
 
-const loadingInfo =document.getElementById("loading");
+const loadingInfo =document.getElementById("loading1");
 
 
 var onProgress = function ( xhr ) {
+  //console.log(xhr);
   // if ( xhr.lengthComputable ) {
   //   var percentComplete = xhr.loaded / xhr.total * 100;
   //   console.log( Math.round(percentComplete, 2) + '% downloaded' );
